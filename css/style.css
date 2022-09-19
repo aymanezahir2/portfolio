@@ -1,0 +1,157 @@
+/* Start Variables */
+:root{
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: .3s all;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+}
+  /* End Variables */
+  /*=========================
+  =====start globale rule=====
+  ===========================*/
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+    height: 5000px;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+  }
+  section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* End the globale Rule */
+/* Start Conponent */
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* End Conponent */
+
+/* Start Header */
+
+
+
+header{
+    box-shadow: 5px 5px 10px #ccc;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .container .logo h3{
+    font-weight: 800;
+    word-spacing: 8px;
+}
+header .container .logo h3 a{
+    color: var(--main-color);
+}
+header .container .links{
+    display: flex;
+}
+header .container .links> li> a{
+    color: black;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    height: 72px;
+    transition: var(--main-transition);
+    position: relative;
+    overflow: hidden;
+}
+header .container .links li a::before{
+    transition: var(--main-transition);
+    content: "";
+    position: absolute;
+    top: 0;
+    border-radius: 3px;
+    background-color: var(--main-color);
+    left: 0;
+    height: 3px;
+    width: 0%;
+}
+header .container .links li a:hover::before{
+    width: 100%;
+}
+header .container .links li a:hover{
+    color: var(--main-color);
+    background-color: #eee;
+}
+
+header .container .another{
+    display: none;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: var(--main-transition);
+    width: 100%;
+    padding: 30px;
+    background-color: white;
+    border-top: 1px #ccc solid;
+    border-bottom: 3px var(--main-color) solid;
+
+}
+header .container .links li:last-child a:hover + nav{
+    opacity: 1;
+    display: flex;
+}
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End Header */
