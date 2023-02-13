@@ -811,6 +811,9 @@ header .container .links .another ul .col li:last-child a {
   width: 100%;
   margin: 10px 0;
 }
+.skill .content .pourcentage .box h3{
+  text-transform: capitalize;
+}
 .skill .content .pourcentage .box div {
   width: 100%;
   background-color: #cecece;
@@ -818,29 +821,20 @@ header .container .links .another ul .col li:last-child a {
   margin-top: 5px;
   position: relative;
 }
-.skill .content .pourcentage .box div::before {
-  content: "";
+.skill .content .pourcentage .box div span {
   position: absolute;
   left: 0;
+  width: 0;
+  transition:2s all;
   height: 100%;
   background-color: var(--main-color-alt);
 }
-.skill .content .pourcentage .box.html div::before {
-  width: 80%;
-}
-.skill .content .pourcentage .box.css div::before {
-  width: 85%;
-}
-.skill .content .pourcentage .box.js div::before {
-  width: 70%;
-}
-.skill .content .pourcentage .box.python div::before {
-  width: 80%;
-}
+
 .skill .content .pourcentage .box div::after {
   position: absolute;
   top: -30px;
   padding: 5px;
+  content:  attr(data-size)"%";
   right: 0;
   border-radius: 6px;
   font-weight: 700;
